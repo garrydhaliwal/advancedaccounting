@@ -79,6 +79,16 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('dist/fonts'));
 });
 
+gulp.task('php', () => {
+  return gulp.src([
+    'mail/*.*'    
+  ], {
+    dot: true
+  })
+  .pipe(gulp.dest('.tmp/mail'))
+  .pipe(gulp.dest('dist/mail'));
+});
+
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
@@ -90,7 +100,7 @@ gulp.task('extras', () => {
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['styles', 'scripts', 'fonts', 'php'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -159,7 +169,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['html', 'images', 'fonts', 'php','extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 

@@ -1,9 +1,13 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 before_script:
-  - npm install
-  - npm install -g bower
-  - npm install -g gulp
-  - bower install
+- npm install
+- npm install -g bower
+- npm install -g gulp
+- bower install
 script: gulp
+deploy:
+  provider: heroku
+  api_key:
+    secure: Srapy2qsCZ48EfkpR/4Bww1xbppfe65I0wAKC4XdNxsIJqxCXc2s3nsec7FZ7ycVpWqJCBfKFkwVDRrbNIGBTySH97fHuTDnUvuCNAxcpiOzixqlSwIDucUYay4dl3thMqN8q8wRgktOKWsM5lcWCfweuMEetiiFlA82QduLdpsQhnzs1TJbUd3jXwqGhwkOU+ExAZ33lNUG/8oz9QdEkhtySpqI3dNu/sC7UXBdw2tFOHaCWJca1nAc2RLQDRrFIPT/sjDi4PZmqeTMPH9dvr+O3INFGU250QnDINTaQs23kNt4ExpSa/X6vMtZN9Z0BqESBtg6X+82079nq1S2Wk1big8uYysStuMQpU4eDvcaFyXPyt33s4maDXQZC/2ZEcQd++h0GTYJzwQkpKSlCijixFTAoYq5IF+ktHJvVclLBJeDxET1Ym2k6dFsrzBcWc9evsSbs7AcqJrLjI+Dz+Qf1M9t3l6P2pzFJr9IaGbrtqPF/gWW+rAUM6Q6XCxrHUcSJCjeukq3N9PJiLoU2A6NOJuR5kjjxIPfQPw0XtK+IWbdXfokWDaQUw9WvLJaCXZYe8+enOVkhcgnnbE/WzraZX5vr1amzOY19fL3PsGz0CPYzzRH1/0AYUMJKRT7SvUeX5UpY065OMEiDuYWu8FPNGgOS0Vy/IU49nvyJ0w=
