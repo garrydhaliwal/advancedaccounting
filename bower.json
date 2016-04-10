@@ -5,7 +5,9 @@
     "bootstrap-sass": "~3.3.5",
     "modernizr": "~2.8.1",
     "font-awesome": "^4.5.0",
-    "jquery-easing": "*"
+    "jquery-easing": "*",
+    "classie": "^1.0.1",
+    "jqBootstrapValidation": "^1.3.7"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -16,9 +18,9 @@
       ]
     },
     "font-awesome": {
-      "main": [        
+      "main": [
         "fonts/*",
-        "scss/font-awesome.scss"     
+        "scss/font-awesome.scss"
       ]
     }
   },
