@@ -92,6 +92,7 @@ gulp.task('php', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
+    'composer.json',
     '!app/*.html'
   ], {
     dot: true
