@@ -93,6 +93,8 @@ gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
     'composer.json',
+    'composer.lock',
+    'Procfile',
     '!app/*.html'
   ], {
     dot: true

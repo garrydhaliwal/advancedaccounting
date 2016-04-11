@@ -1,2 +1,2 @@
 
-web: vendor/bin/heroku-php-apache2 dest/
+web: vendor/bin/heroku-php-apache2
