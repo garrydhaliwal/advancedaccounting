@@ -86,7 +86,9 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 .navbar-default {
-	background-color: $gray-darkest;
+	background: $gray-darkest; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, $gray-darkest , $gradient-secondary); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, $gray-darkest , $gradient-secondary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	border-color: transparent;
 	.navbar-brand {
 		color: $brand-primary;
@@ -167,7 +169,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-	background-image: url('../images/header-bg.jpg');
+	background: $gray-darkest; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, $gray-darkest , $gradient-secondary); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, $gray-darkest , $gradient-secondary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	background-repeat: none;
 	background-attachment: scroll;
 	background-position: center center;
@@ -534,8 +538,11 @@ aside.clients {
 // Contact Section
 
 section#contact {
-	background-color: $gray-darkest;
-	background-image: url('../images/map-image.png');
+	background-color: $gray-darkest; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, $gray-darkest , $gradient-secondary); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, $gray-darkest , $gradient-secondary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+	/*background-image: url('../images/map-image.png'); */
 	background-position: center;
 	background-repeat: no-repeat;
 	.section-heading {
